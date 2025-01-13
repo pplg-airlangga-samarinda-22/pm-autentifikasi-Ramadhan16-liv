@@ -6,10 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Cek dulu apakah NIK telah terdaftar
     $sql = "SELECT * FROM masyarakat WHERE nik = ?";
-    $stmt = $koneksi->prepare($sql);
-    $stmt->bind_param("s", $nik);
-    $stmt->execute();
-    $cek = $stmt->get_result();
+    $cek = $koneksi->execute_query($sql, [$nik]);
 
     if ($cek->num_rows == 1) {
         echo "<script>alert('NIK sudah digunakan!')</script>";
