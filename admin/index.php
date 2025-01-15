@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-require_once "koneksi.php";
-    if (empty($_SESSION['nik'])) {
+require_once "../koneksi.php";
+    if (empty($_SESSION['username'])) {
         header("location:login.php");
     }
  
@@ -20,7 +20,9 @@ require_once "koneksi.php";
     <nav>
         <a href="index.php">Dashboard</a>
         <a href="aduan.php">Aduan</a>
+        <a href="register.php">register</a>
         <a href="logout.php">Logout</a>
+
     </nav>
 </body>
 
