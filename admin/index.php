@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-require_once "../koneksi.php";
-    if (empty($_SESSION['username'])) {
+require "../koneksi.php";
+    if (empty($_SESSION['level'])) {
         header("location:login.php");
     }
  
@@ -16,11 +16,13 @@ require_once "../koneksi.php";
 </head>
 
 <body>
-    <h1>Selamat Datang di Aplikasi Pengaduan Masyarakat</h1>
+    <h1>Selamat Datang di Sistem Pengaduan Masyarakat</h1>
     <nav>
         <a href="index.php">Dashboard</a>
-        <a href="aduan.php">Aduan</a>
-        <a href="register.php">register</a>
+        <a href="../pengaduan/pengaduan.php">pengaduan</a>
+        <a href="../masyarakat/masyarakat.php">Masyarakat</a>
+        <a href="../petugas/petugas.php">petugas</a>
+        <a href="../laporan.php">laporan</a>
         <a href="logout.php">Logout</a>
 
     </nav>
