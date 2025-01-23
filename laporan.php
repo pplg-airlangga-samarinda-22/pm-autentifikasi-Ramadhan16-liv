@@ -34,7 +34,7 @@ require "koneksi.php";
         .header h1 {
             font-size: 2rem;
             color: #004085;
-            flex: 1;
+            flex: 1;    
             text-align: center;
         }
         .header a {

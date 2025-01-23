@@ -5,11 +5,14 @@ require "../koneksi.php";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nama = $_POST['nama'];
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
     $telepon = $_POST['telepon'];
     $level = $_POST['level'];
-    
+    if (empty($level)) {
+        echo "<script> alert('level belum terpilih')</script>";
+    } else {
     $sql = "INSERT INTO petugas (nama_petugas, username, password, telp, level) VALUES (?, ?, ?, ?, ?)";
+    }
     $row = $koneksi->execute_query($sql, [$nama, $username, $password, $telepon, $level]);
 
     if ($row) {
