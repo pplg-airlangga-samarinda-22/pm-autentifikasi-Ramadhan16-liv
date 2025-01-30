@@ -13,7 +13,7 @@ require "../koneksi.php";
 <body>
     <h1>Data Petugas</h1>
     <a href="petugas-form.php">Tambah Petugas Baru</a>
-    <table>
+    <table border="1">
         <thead>
             <th>No</th>
             <th>Nama</th>

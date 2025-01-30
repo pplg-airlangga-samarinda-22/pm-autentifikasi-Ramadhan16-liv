@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <form action="" method="POST">
         <div class="form-item">
             <label for="level">Level Akses</label>
-            <select name="level" id="level">
+            <select name="level" id="level" required>
                 <option value="" disabled selected>Pilih level akses</option>
                 <option value="admin">Admin</option>
                 <option value="petugas">Petugas</option>
@@ -41,19 +41,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <div class="form-item">
             <label for="nama">Nama Petugas</label>
-            <input type="text" name="nama" id="nama">
+            <input type="text" name="nama" id="nama" required>
         </div>
         <div class="form-item">
             <label for="telepon">Telepon</label>
-            <input type="tel" name="telepon" id="telepon">
+            <input type="tel" name="telepon" id="telepon" required>
         </div>
         <div class="form-item">
             <label for="username">Username</label>
-            <input type="text" name="username" id="username">
+            <input type="text" name="username" id="username" required>
         </div>
         <div class="form-item">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" required>
         </div>
         <button type="submit">Kirim</button>
         <a href="petugas.php">Batal</a>
